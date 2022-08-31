@@ -8,7 +8,7 @@
 import UIKit
 
 class MyProfileVC: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -18,7 +18,7 @@ class MyProfileVC: UIViewController {
         tableView.register(UINib(nibName: "UserInfoTableCell", bundle: nil), forCellReuseIdentifier: "UserInfoTableCell")
         tableView.register(UINib(nibName: "MyProfileOtherCell", bundle: nil), forCellReuseIdentifier: "MyProfileOtherCell")
     }
-
+    
 }
 
 extension MyProfileVC: UITableViewDelegate, UITableViewDataSource {

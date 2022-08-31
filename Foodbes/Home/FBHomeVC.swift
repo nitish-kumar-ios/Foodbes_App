@@ -18,9 +18,7 @@ var menuData = [MenuCategory(itemName: "Foods", isSelected: false),
                 MenuCategory(itemName: "Momos", isSelected: true),
                 MenuCategory(itemName: "Combos", isSelected: true),
                 MenuCategory(itemName: "Meals", isSelected: true),
-                MenuCategory(itemName: "Dessert", isSelected: true)]
-                
-                
+                MenuCategory(itemName: "Desserts", isSelected: true)]
 
 class FBHomeVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
@@ -47,15 +45,15 @@ extension FBHomeVC: UICollectionViewDelegate , UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView != ItemCollectionView{
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionCell
-        cell.label.text = menuData[indexPath.row].itemName
-        cell.selectedView.isHidden = menuData[indexPath.row].isSelected
-        if !menuData[indexPath.row].isSelected {
-            cell.label.textColor = #colorLiteral(red: 1, green: 0.2779999971, blue: 0.04300000146, alpha: 1)
-        } else {
-            cell.label.textColor = .gray
-        }
-        return cell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionCell
+            cell.label.text = menuData[indexPath.row].itemName
+            cell.selectedView.isHidden = menuData[indexPath.row].isSelected
+            if !menuData[indexPath.row].isSelected {
+                cell.label.textColor = #colorLiteral(red: 1, green: 0.2779999971, blue: 0.04300000146, alpha: 1)
+            } else {
+                cell.label.textColor = .gray
+            }
+            return cell
         } else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuItemCell", for: indexPath) as! MenuItemCell
             return cell
@@ -78,7 +76,7 @@ extension FBHomeVC: UICollectionViewDelegate , UICollectionViewDataSource {
         collectionView.reloadData()
     }
     
-
+    
 }
 
 
@@ -86,10 +84,10 @@ extension FBHomeVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView != ItemCollectionView {
-        return CGSize(width: menuData[indexPath.item].itemName.size(withAttributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17)]).width + 25, height: collectionView.frame.height)
+            return CGSize(width: menuData[indexPath.item].itemName.size(withAttributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17)]).width + 25, height: collectionView.frame.height)
         }
         return CGSize(width: collectionView.frame.width / 1.8 - 30, height: collectionView.frame.height)
-}
+    }
 }
 
 extension FBHomeVC : UITextFieldDelegate {

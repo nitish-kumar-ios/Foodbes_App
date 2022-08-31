@@ -15,7 +15,7 @@ class MenuItemCell: UICollectionViewCell {
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var itemView: UIView!
     @IBOutlet weak var upperOutlet : NSLayoutConstraint!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         itemView.layer.applySketchShadow(color: UIColor(named: "iteamViewShadowColor") ?? UIColor(), alpha: 0.1, x: 0, y: 30, blur: 60, spread: 0)
