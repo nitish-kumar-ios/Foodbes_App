@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Rounded-Semibold.otf">
+            <string>SFProRounded-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuItemCell" id="gTV-IL-0wX" customClass="MenuItemCell" customModule="Foodbes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="220" height="315"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="220" height="315"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lpc-by-eqb">
+                        <rect key="frame" x="0.0" y="84" width="220" height="231"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price: ₹100. 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="837-xP-obX">
+                                <rect key="frame" x="5" y="180.5" width="210" height="20.5"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Semibold" family="SF Pro Rounded" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.27058823529999998" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veggie tomato mix" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1L-db-khI">
+                                <rect key="frame" x="25" y="112.5" width="170" height="53"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Semibold" family="SF Pro Rounded" pointSize="22"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="837-xP-obX" secondAttribute="bottom" constant="30" id="KQK-8D-pYr"/>
+                            <constraint firstAttribute="trailing" secondItem="837-xP-obX" secondAttribute="trailing" constant="5" id="OO4-SQ-M1b"/>
+                            <constraint firstItem="837-xP-obX" firstAttribute="top" secondItem="V1L-db-khI" secondAttribute="bottom" constant="15" id="fMM-06-bq3"/>
+                            <constraint firstItem="V1L-db-khI" firstAttribute="leading" secondItem="Lpc-by-eqb" secondAttribute="leading" constant="25" id="gM4-Gh-p7f"/>
+                            <constraint firstAttribute="trailing" secondItem="V1L-db-khI" secondAttribute="trailing" constant="25" id="rm9-fM-Wlu"/>
+                            <constraint firstItem="837-xP-obX" firstAttribute="leading" secondItem="Lpc-by-eqb" secondAttribute="leading" constant="5" id="vXa-Av-VhQ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="30"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 2-1" translatesAutoresizingMaskIntoConstraints="NO" id="c0A-Y9-Cng">
+                        <rect key="frame" x="40.5" y="5" width="139" height="139"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="c0A-Y9-Cng" secondAttribute="height" multiplier="1:1" id="gyz-d4-ZZ9"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="c0A-Y9-Cng" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="1er-oz-wQE"/>
+                <constraint firstAttribute="bottom" secondItem="Lpc-by-eqb" secondAttribute="bottom" id="3O8-e4-XH8"/>
+                <constraint firstItem="c0A-Y9-Cng" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="LzW-yN-oHE"/>
+                <constraint firstItem="Lpc-by-eqb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="XiE-Vk-FCe"/>
+                <constraint firstItem="c0A-Y9-Cng" firstAttribute="height" secondItem="Lpc-by-eqb" secondAttribute="height" multiplier="0.6" id="d0a-rT-aE1"/>
+                <constraint firstItem="c0A-Y9-Cng" firstAttribute="baseline" secondItem="Lpc-by-eqb" secondAttribute="firstBaseline" constant="60" id="ei2-qA-8FA"/>
+                <constraint firstAttribute="trailing" secondItem="Lpc-by-eqb" secondAttribute="trailing" id="qej-lE-4Es"/>
+            </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <integer key="value" value="30"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="itemImage" destination="c0A-Y9-Cng" id="DmT-A7-bAs"/>
+                <outlet property="itemView" destination="Lpc-by-eqb" id="zeD-ZC-6WC"/>
+                <outlet property="upperOutlet" destination="1er-oz-wQE" id="k1m-T4-fAm"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="97.433035714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="image 2-1" width="241.5" height="241.5"/>
+    </resources>
+</document>
